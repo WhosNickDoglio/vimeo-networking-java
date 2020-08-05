@@ -41,6 +41,7 @@ import okhttp3.CacheControl
 import retrofit2.http.Body
 import retrofit2.http.DELETE
 import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Headers
@@ -76,6 +77,7 @@ internal interface VimeoService {
     ): VimeoCall<ConnectedApp>
 
     @PUT("me/connected_apps/{type}")
+    @FormUrlEncoded
     fun createConnectedApp(
         @Header(AUTHORIZATION) authorization: String,
         @Path("type") type: ConnectedAppType,
