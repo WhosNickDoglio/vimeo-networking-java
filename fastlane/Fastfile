@@ -41,7 +41,6 @@ platform :android do
         )
 
         # TODO: publish Snapshots with snapshot = true
-        end
       end
     end
   end
