@@ -25,9 +25,10 @@ jobs:
         uses: actions/setup-java@v1.4.3
         with:
           java-version: 1.8
-      - name: Run
-        run: |
-          ./rvm install 2.6.3
-          ./rvm use 2.6.3
-          ./bundle install
-          ./FASTLANE_SKIP_UPDATE_CHECK=1 bundle exec fastlane shipit
+      - name: Install Ruby
+        uses: ruby/setup-ruby@v1.52.0
+        with:
+          ruby-version: 2.6.3
+          bundler-cache: true
+      - name: Fastlane
+        run: ./FASTLANE_SKIP_UPDATE_CHECK=1 bundle exec fastlane shipit
