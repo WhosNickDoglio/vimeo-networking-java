@@ -2,7 +2,7 @@ name: Release
 
 on:
   push:
-    branches: [ develop, TECH-Github-Actions ]
+    branches: [ develop, update-dependencies ]
 
 jobs:
   build:
