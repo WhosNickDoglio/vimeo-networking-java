@@ -31,4 +31,4 @@ jobs:
           ruby-version: 2.6.3
           bundler-cache: true
       - name: Fastlane
-        run: ./FASTLANE_SKIP_UPDATE_CHECK=1 bundle exec fastlane shipit
+        run: FASTLANE_SKIP_UPDATE_CHECK=1 bundle exec fastlane shipit
